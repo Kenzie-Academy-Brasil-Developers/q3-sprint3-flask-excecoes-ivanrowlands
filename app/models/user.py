@@ -21,7 +21,7 @@ class User:
             ...
         if not os.path.exists(DB_JSON):
            new_database_json()
-        with open(DB_JSON, 'r') as json_file:
+        with open(DB_JSON) as json_file:
             return load(json_file)
 
     @staticmethod

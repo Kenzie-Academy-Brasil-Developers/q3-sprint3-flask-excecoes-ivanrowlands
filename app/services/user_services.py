@@ -13,7 +13,7 @@ DB_JSON = getenv("LOCATION_JSON_DATA")
 def new_database_json() -> None:
     os.system("mkdir app/database")
     new_file = []
-    with open(DB_JSON, 'w') as json_content:
+    with open(DB_JSON) as json_content:
         dump(new_file, json_content, indent=4)
 
 def get_request_new() -> json:
